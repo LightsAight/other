@@ -1,0 +1,21 @@
+local id = 6296761542
+
+for i, v in game:GetDescendants() do
+	if v:IsA("ImageLabel") or v:IsA("ImageButton") or v:IsA("Decal") then
+		if v:IsA("Decal") then
+			v.ColorMapContent = Content.fromAssetId(id)
+			continue
+		end
+		v.Image = "rbxassetid://"..id
+	end
+end
+
+game.DescendantAdded:Connect(function(v)
+	if v:IsA("ImageLabel") or v:IsA("ImageButton") or v:IsA("Decal") then
+		if v:IsA("Decal") then
+			v.ColorMapContent = Content.fromAssetId(id)
+			return
+		end
+		v.Image = "rbxassetid://"..id
+	end
+end)
