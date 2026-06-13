@@ -1,4 +1,4 @@
-local id = 6296761542
+local id = 6296761535
 
 for i, v in game:GetDescendants() do
 	if v:IsA("ImageLabel") or v:IsA("ImageButton") or v:IsA("Decal") then
